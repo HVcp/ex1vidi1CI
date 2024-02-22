@@ -61,7 +61,7 @@ jobs:
           dotnet-version: 6.x
 
       - name: Build and publish
-        working-directory: D:/Github2/gitpractfiles/ex2vidi1/ex1vidi1CI
+        working-directory: WebApplication1
         run: |
           dotnet build --configuration Release
           dotnet publish -c Release -o out
