@@ -43,14 +43,66 @@
 #           dotnet build --configuration Release
 #           dotnet publish -c Release -o out
 
+# name: Build on push
+# on:
+#   push:
+#     branches:
+#       - main
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout repository
+#         uses: actions/checkout@v2
+
+#       - name: Setup .NET Core
+#         uses: actions/setup-dotnet@v1
+#         with:
+#           dotnet-version: 6.x
+
+#       - name: Build and publish
+#         working-directory: WebApplication1
+#         run: |
+#           dotnet build --configuration Release
+#           dotnet publish -c Release -o out
+
+#########
+# name: Super-Linter
+
+# on:
+#   push:
+#     branches:
+#       - main  # Adjust this to match your repository's main branch name
+
+# jobs:
+#   super-lint:
+#     name: Lint code base
+#     runs-on: ubuntu-latest
+
+#     steps:
+#       - name: Checkout code
+#         uses: actions/checkout@v2
+
+#       - name: Run Super-Linter
+#         uses: github/Super-Linter@v3
+#         env:
+#           DEFAULT_BRANCH: main
+#           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+###############
+
+
+
 name: Build on push
+
 on:
   push:
     branches:
       - main
+
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
@@ -61,7 +113,6 @@ jobs:
           dotnet-version: 6.x
 
       - name: Build and publish
-        working-directory: WebApplication1
         run: |
           dotnet build --configuration Release
           dotnet publish -c Release -o out
