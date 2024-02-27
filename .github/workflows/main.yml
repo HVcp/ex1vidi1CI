@@ -112,7 +112,13 @@ jobs:
         with:
           dotnet-version: 6.x
 
-      - name: Build and publish
-        run: |
-          dotnet build --configuration Release
-          dotnet publish -c Release -o out
+      # - name: Build and publish
+      #   run: |
+      #     dotnet build --configuration Release
+      #     dotnet publish -c Release -o out
+      
+      - name: Restore dependencies
+        run: dotnet restore
+      
+      - name: Build project
+        run: dotnet build https://github.com/HVcp/ex1vidi1CI/tree/main/WebApplication1/WebApplication1.csproj
