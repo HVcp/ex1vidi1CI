@@ -182,8 +182,8 @@ jobs:
           dotnet-version: 6.x
 
       - name: Build and publish
-        run: |
         working-directory: WebApplication1
+        run: |
           dotnet build --configuration Release
           dotnet publish -c Release -o out
 
