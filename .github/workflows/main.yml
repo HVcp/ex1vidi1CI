@@ -183,7 +183,7 @@ jobs:
 
       - name: Build and publish
         run: |
-         #working-directory: WebApplication1
+        working-directory: WebApplication1
           dotnet build --configuration Release
           dotnet publish -c Release -o out
 
