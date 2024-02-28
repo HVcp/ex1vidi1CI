@@ -119,13 +119,16 @@ jobs:
 
         
       - name: Restore dependencies
-        run: |
+        run: dotnet restore
+        working-directory: WebApplication1
+        
           # echo "----------------List----------"
           # ls
           # echo "----------------workspace----------"
           # github.workspace
           # cd WebApplication1
-          dotnet restore
+          
+        
       
       - name: Build project
         run: dotnet build 
