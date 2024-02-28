@@ -181,16 +181,17 @@ jobs:
         with:
           dotnet-version: 6.x
 
-      # - name: Build and publish
-      #   run: |
-      #     dotnet build --configuration Release
-      #     dotnet publish -c Release -o out
+      - name: Build and publish
+        run: |
+        working-directory: WebApplication1
+          dotnet build --configuration Release
+          dotnet publish -c Release -o out
 
         
       # - name: Restore dependencies
       #   run: dotnet restore
       #   working-directory: WebApplication1
 
-      - name: Build project
-        run: dotnet build 
-        working-directory: WebApplication1
+      # - name: Build project
+      #   run: dotnet build 
+      #   working-directory: WebApplication1
