@@ -120,11 +120,11 @@ jobs:
         
       - name: Restore dependencies
         run: |
-          echo "----------------List----------"
-          ls
-          echo "----------------workspace----------"
-          github.workspace
-          cd WebApplication1
+          # echo "----------------List----------"
+          # ls
+          # echo "----------------workspace----------"
+          # github.workspace
+          # cd WebApplication1
           dotnet restore
       
       - name: Build project
