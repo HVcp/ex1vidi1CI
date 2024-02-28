@@ -122,3 +122,7 @@ jobs:
       
       - name: Build project
         run: dotnet build https://github.com/HVcp/ex1vidi1CI/tree/main/WebApplication1/WebApplication1.csproj
+
+      
+      - name: Build project
+        run: dotnet build D:\Github2\gitpractfiles\ex2vidi1\ex1vidi1CI\WebApplication1\WebApplication1.sln
