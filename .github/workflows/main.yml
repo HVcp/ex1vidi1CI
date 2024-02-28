@@ -121,7 +121,9 @@ jobs:
       - name: Restore dependencies
         run: |
           echo "----------------List----------"
-          echo ls
+          ls
+          echo "----------------workspace----------"
+          github.workspace
           dotnet restore
       
       - name: Build project
