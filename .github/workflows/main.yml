@@ -92,7 +92,77 @@
 
 
 
-name: Build on push
+# name: Build on push
+
+# on:
+#   push:
+#     branches:
+#       - main
+
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
+
+#     steps:
+#       - name: Checkout repository
+#         uses: actions/checkout@v2
+
+#       - name: Setup .NET Core
+#         uses: actions/setup-dotnet@v1
+#         with:
+#           dotnet-version: 6.x
+
+#       # - name: Build and publish
+#       #   run: |
+#       #     dotnet build --configuration Release
+#       #     dotnet publish -c Release -o out
+
+        
+#       - name: Restore dependencies
+#         run: dotnet restore
+#         working-directory: WebApplication1
+        
+#           # echo "----------------List----------"
+#           # ls
+#           # echo "----------------workspace----------"
+#           # github.workspace
+#           # cd WebApplication1
+          
+        
+      
+#       - name: Build project
+#         run: dotnet build 
+#         working-directory: WebApplication1
+      
+      # - name: Build project
+      #   run: dotnet build D:\Github2\gitpractfiles\ex2vidi1\ex1vidi1CI\WebApplication1\WebApplication1.sln
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      name: Build on push
 
 on:
   push:
@@ -121,18 +191,7 @@ jobs:
       - name: Restore dependencies
         run: dotnet restore
         working-directory: WebApplication1
-        
-          # echo "----------------List----------"
-          # ls
-          # echo "----------------workspace----------"
-          # github.workspace
-          # cd WebApplication1
-          
-        
-      
+
       - name: Build project
         run: dotnet build 
-
-      
-      - name: Build project
-        run: dotnet build D:\Github2\gitpractfiles\ex2vidi1\ex1vidi1CI\WebApplication1\WebApplication1.sln
+        working-directory: WebApplication1
