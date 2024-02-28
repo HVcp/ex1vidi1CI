@@ -116,9 +116,13 @@ jobs:
       #   run: |
       #     dotnet build --configuration Release
       #     dotnet publish -c Release -o out
-      
+
+        
       - name: Restore dependencies
-        run: dotnet restore
+        run: |
+          echo "----------------List----------"
+          echo ls
+          dotnet restore
       
       - name: Build project
         run: dotnet build https://github.com/HVcp/ex1vidi1CI/tree/main/WebApplication1/WebApplication1.csproj
