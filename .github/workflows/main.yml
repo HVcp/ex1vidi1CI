@@ -187,9 +187,9 @@ jobs:
       #     dotnet publish -c Release -o out
 
         
-      - name: Restore dependencies
-        run: dotnet restore
-        working-directory: WebApplication1
+      # - name: Restore dependencies
+      #   run: dotnet restore
+      #   working-directory: WebApplication1
 
       - name: Build project
         run: dotnet build 
