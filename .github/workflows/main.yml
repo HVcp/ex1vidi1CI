@@ -111,18 +111,15 @@ jobs:
         uses: actions/setup-dotnet@v1
         with:
           dotnet-version: 6.x
-
-      # - name: Build and publish
-      #   run: |
-      #     dotnet build --configuration Release
-      #     dotnet publish -c Release -o out
-      
+          
+    
       - name: Restore dependencies
         run: dotnet restore
-      
-      # - name: Build project
-      #   run: dotnet build https://github.com/HVcp/ex1vidi1CI/tree/main/WebApplication1/WebApplication1.csproj
+        working-directory: WebApplication1
 
+      # - name: Build project
+      #   run: dotnet build 
+      #   working-directory: WebApplication1
+          
       
-      - name: Build project
-        run: dotnet build D:\Github2\gitpractfiles\ex2vidi1\ex1vidi1CI\WebApplication1\WebApplication1.sln
+    
