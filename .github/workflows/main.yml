@@ -124,10 +124,11 @@ jobs:
           ls
           echo "----------------workspace----------"
           github.workspace
+          cd WebApplication1
           dotnet restore
       
       - name: Build project
-        run: dotnet build https://github.com/HVcp/ex1vidi1CI/tree/main/WebApplication1/WebApplication1.csproj
+        run: dotnet build 
 
       
       - name: Build project
